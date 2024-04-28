@@ -1,0 +1,110 @@
+How to uninstall MinION Software for Mk1b and P2 solo
+Updated over a week ago
+
+Please note: Local Administrator account privilege is required for full uninstallation and reinstallation of MinKNOW for Mk1B and P2 solo.
+
+ 
+
+For Windows
+
+ 
+
+1. Move reads to another folder, and delete the 'Data' Folder
+
+ 
+
+2. Uninstall all MinKNOW (please make sure to do a full uninstallation from the drop-down menu during the uninstall process) and Microsoft Visual C++ from your computer control panel.
+
+ 
+
+3. Delete any previous versions of MinKNOW installer that could be in your downloads folder (please check other folders for any previous installers).
+
+ 
+
+4. Click Start, type "%appdata%" (without quotes), and press enter. In the window that opens, please delete the "mkw" and "minnow" folders.
+
+ 
+
+5. Reboot your computer then re-download and install the MinKNOW software. MinKNOW downloads as a zip file, so please make sure to extract the MinKNOW Installer zip file, or the installation will not be fully complete.
+
+ 
+
+During installation please select to do a 'full installation'.
+
+ 
+
+For MAC
+
+ 
+
+1. Download the MinKNOW dmg file
+
+ 
+
+2. Remove /Application/MinKNOW.app
+
+ 
+
+3. Remove /Library/LaunchDaemons/mk\_manager\_svc.plist
+
+ 
+
+4. Restart your Mac
+
+ 
+
+5. Mount MinKNOW dmg file and install MinKNOW software
+
+ 
+
+6. Start the MinKNOW software
+
+ 
+
+7. Check that /Library/LaunchDaemons/mk\_manager\_svc.plist is created. If mk\_manager\_svc.plist is not created, restart MinKNOW
+
+ 
+
+8. Start “Activity Monitor” and check that mk\_manager\_svc is running. If it is not started, restart MinKNOW. If mk\_manager\_svc is still not started, reboot your Mac
+
+ 
+
+9. If showing "MinKNOW cannot connect to host", open a terminal and type: cd /Applications/MinKNOW/Contents/Resources followed by sudo bin/mk\_manager\_svc and make sure you don't close the terminal window. Refresh MinKNOW GUI by pressing Cmd + R
+
+ 
+
+10. Plug in your MinION. Wait for 10 seconds. Press Cmd + R. Wait for 10 to 20 seconds and see if your MinION gets listed.
+
+ 
+
+11. If your MinION does not show up, again press Cmd + R and wait for the screen update. If it still does not show up, try a different USB port
+
+ 
+
+For Linux
+
+ 
+
+1. Open terminal (Ctrl + Alt + T)
+
+ 
+
+2. Enter these commands one by one and press "Y" when required.
+
+ 
+
+For CPU MinKNOW:
+
+ 
+
+sudo apt purge ont-standalone-minknow-release
+sudo apt autoremove
+
+For GPU MinKNOW:
+
+ 
+
+sudo apt purge ont-standalone-minknow-gpu-release
+sudo apt autoremove
+
+3. Follow the instructions here
